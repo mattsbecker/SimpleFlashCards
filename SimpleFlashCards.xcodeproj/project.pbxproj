@@ -15,6 +15,9 @@
 		C91E5C0E1BEECE5D0043C951 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C0D1BEECE5D0043C951 /* Question.swift */; };
 		C91E5C101BEECE6F0043C951 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C0F1BEECE6F0043C951 /* Answer.swift */; };
 		C91E5C121BEED0470043C951 /* QAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C111BEED0470043C951 /* QAController.swift */; };
+		C9DF26911C1D1CEC0081EB0E /* generate-flashcard-answer.rb in Resources */ = {isa = PBXBuildFile; fileRef = C9DF26901C1D1CEC0081EB0E /* generate-flashcard-answer.rb */; };
+		C9ECF4231C1D1D2500DD8A3D /* remaining-works.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9ECF4211C1D1D2500DD8A3D /* remaining-works.txt */; };
+		C9ECF4241C1D1D2500DD8A3D /* appropriation-works.txt in Resources */ = {isa = PBXBuildFile; fileRef = C9ECF4221C1D1D2500DD8A3D /* appropriation-works.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C91E5C0D1BEECE5D0043C951 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		C91E5C0F1BEECE6F0043C951 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		C91E5C111BEED0470043C951 /* QAController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAController.swift; sourceTree = "<group>"; };
+		C9DF26901C1D1CEC0081EB0E /* generate-flashcard-answer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "generate-flashcard-answer.rb"; sourceTree = "<group>"; };
+		C9ECF4211C1D1D2500DD8A3D /* remaining-works.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "remaining-works.txt"; sourceTree = "<group>"; };
+		C9ECF4221C1D1D2500DD8A3D /* appropriation-works.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "appropriation-works.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,7 @@
 			children = (
 				C91E5BFA1BEEC4800043C951 /* SimpleFlashCards */,
 				C91E5BF91BEEC4800043C951 /* Products */,
+				C9DF268F1C1D1CCF0081EB0E /* Tools */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,17 @@
 				C91E5C0D1BEECE5D0043C951 /* Question.swift */,
 				C91E5C111BEED0470043C951 /* QAController.swift */,
 			);
+			path = SimpleFlashCards;
+			sourceTree = "<group>";
+		};
+		C9DF268F1C1D1CCF0081EB0E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF26901C1D1CEC0081EB0E /* generate-flashcard-answer.rb */,
+				C9ECF4211C1D1D2500DD8A3D /* remaining-works.txt */,
+				C9ECF4221C1D1D2500DD8A3D /* appropriation-works.txt */,
+			);
+			name = Tools;
 			path = SimpleFlashCards;
 			sourceTree = "<group>";
 		};
@@ -133,8 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91E5C061BEEC4800043C951 /* LaunchScreen.storyboard in Resources */,
+				C9ECF4231C1D1D2500DD8A3D /* remaining-works.txt in Resources */,
+				C9ECF4241C1D1D2500DD8A3D /* appropriation-works.txt in Resources */,
 				C91E5C031BEEC4800043C951 /* Assets.xcassets in Resources */,
 				C91E5C011BEEC4800043C951 /* Main.storyboard in Resources */,
+				C9DF26911C1D1CEC0081EB0E /* generate-flashcard-answer.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
