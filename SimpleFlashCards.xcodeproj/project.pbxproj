@@ -12,6 +12,9 @@
 		C91E5C011BEEC4800043C951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91E5BFF1BEEC4800043C951 /* Main.storyboard */; };
 		C91E5C031BEEC4800043C951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91E5C021BEEC4800043C951 /* Assets.xcassets */; };
 		C91E5C061BEEC4800043C951 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91E5C041BEEC4800043C951 /* LaunchScreen.storyboard */; };
+		C91E5C0E1BEECE5D0043C951 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C0D1BEECE5D0043C951 /* Question.swift */; };
+		C91E5C101BEECE6F0043C951 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C0F1BEECE6F0043C951 /* Answer.swift */; };
+		C91E5C121BEED0470043C951 /* QAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5C111BEED0470043C951 /* QAController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C91E5C021BEEC4800043C951 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C91E5C051BEEC4800043C951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91E5C071BEEC4800043C951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91E5C0D1BEECE5D0043C951 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C91E5C0F1BEECE6F0043C951 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		C91E5C111BEED0470043C951 /* QAController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				C91E5C021BEEC4800043C951 /* Assets.xcassets */,
 				C91E5C041BEEC4800043C951 /* LaunchScreen.storyboard */,
 				C91E5C071BEEC4800043C951 /* Info.plist */,
+				C91E5C0F1BEECE6F0043C951 /* Answer.swift */,
+				C91E5C0D1BEECE5D0043C951 /* Question.swift */,
+				C91E5C111BEED0470043C951 /* QAController.swift */,
 			);
 			path = SimpleFlashCards;
 			sourceTree = "<group>";
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					C91E5BF71BEEC4800043C951 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 67X2M9MT5G;
 					};
 				};
 			};
@@ -135,8 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91E5C0E1BEECE5D0043C951 /* Question.swift in Sources */,
 				C91E5BFE1BEEC4800043C951 /* ViewController.swift in Sources */,
+				C91E5C121BEED0470043C951 /* QAController.swift in Sources */,
 				C91E5BFC1BEEC4800043C951 /* AppDelegate.swift in Sources */,
+				C91E5C101BEECE6F0043C951 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattsbecker.SimpleFlashCards;
@@ -258,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleFlashCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattsbecker.SimpleFlashCards;
@@ -284,6 +299,7 @@
 				C91E5C0C1BEEC4800043C951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
