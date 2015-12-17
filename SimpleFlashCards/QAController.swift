@@ -67,7 +67,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Jack Goldstein, The Pull,  1976,  Chromogenic color print,  Appropriation
         
-        answer = Answer.init(title: "The Pull", artist: "Jack Goldstein", year: " 1976", media: " Chromogenic color print", metadata: " none ", movement: " Appropriation" )
+        answer = Answer.init(title: "The Pull", artist: "Jack Goldstein", year: "1976", media: " Chromogenic color print", metadata: " none ", movement: " Appropriation" )
         
         image = UIImage.init(named: "The Pull")
         
@@ -87,7 +87,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Omer Fast, CNN Concatenated, video - 7 min, 2002, Appropriation
         
-        answer = Answer.init(title: "CNN Concatenated", artist: "Omer Fast", year: "video - 7 min", media: "2002", metadata: " none ", movement: "Appropriation" )
+        answer = Answer.init(title: "CNN Concatenated", artist: "Omer Fast", year: "2002", media: "video - 7 min", metadata: " none ", movement: "Appropriation" )
         
         image = UIImage.init(named: "CNN Concatenated")
         
@@ -107,7 +107,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Ai Weiwei, Straight, 150 tons of straighten rebars, dimensions vary, 2008-2012, East Asia, Africa, Middle East - East Asia
         
-        answer = Answer.init(title: "Straight", artist: "Ai Weiwei", year: "150 tons of straighten rebars, dimensions vary", media: "2008-2012", metadata: " none ", movement: "East Asia, Africa, Middle East - East Asia" )
+        answer = Answer.init(title: "Straight", artist: "Ai Weiwei", year: "2008-2012", media: "150 tons of straighten rebars, dimensions vary", metadata: " none ", movement: "East Asia, Africa, Middle East - East Asia" )
         
         image = UIImage.init(named: "Straight")
         
@@ -127,7 +127,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Tehching Hsieh, One-Year Performance, , 1981-82, East Asia, Africa, Middle East - East Asia
         
-        answer = Answer.init(title: "One-Year Performance", artist: "Tehching Hsieh", year: "", media: "1981-82", metadata: " none ", movement: "East Asia, Africa, Middle East - East Asia" )
+        answer = Answer.init(title: "One-Year Performance", artist: "Tehching Hsieh", year: "1981-82", media: "", metadata: " none ", movement: "East Asia, Africa, Middle East - East Asia" )
         
         image = UIImage.init(named: "One-Year Performance")
         
@@ -197,7 +197,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Oleg Kulik, Dog House, performance, 1995-present, Other Territories, Part II(Eastern Europe, Latin America)
         
-        answer = Answer.init(title: "Dog House", artist: "Oleg Kulik", year: "performance", media: "1995-present", metadata: " none ", movement: "Other Territories, Part II(Eastern Europe, Latin America)" )
+        answer = Answer.init(title: "Dog House", artist: "Oleg Kulik", year: "1995-present", media: "performance", metadata: " none ", movement: "Other Territories, Part II(Eastern Europe, Latin America)" )
         
         image = UIImage.init(named: "Dog House")
         
@@ -267,7 +267,7 @@ class QAController {
         self.questionAnswerArray.append(question)
         // Anish Kapoor, Marsyas, Tate Modern, London, 2003, steel and PVC membrane
         
-        answer = Answer.init(title: "Marsyas", artist: "Anish Kapoor", year: "Tate Modern, London", media: "2003", metadata: " none ", movement: "steel and PVC membrane" )
+        answer = Answer.init(title: "Marsyas, Tate Modern, London", artist: "Anish Kapoor", year: "2003", media: "steel and PVC membrane", metadata: " none ", movement: "Art, Globalization, and the Market" )
         
         image = UIImage.init(named: "Marsyas")
         
