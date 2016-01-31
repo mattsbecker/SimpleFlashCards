@@ -64,8 +64,14 @@ class ViewController: UIViewController {
         if (self.currentQuestion != nil) {
             position = (self.currentQuestion?.position)! + 1
         }
-        let currentQuestion = QAController.sharedInstance.retreiveQuestionFromArrayById(position)
-        showQuestion(currentQuestion)
+        // is there a question avaialble at the next index?
+        if (QAController.sharedInstance.answerIsAvailableAtIndex(position)) {
+            let currentQuestion = QAController.sharedInstance.retreiveQuestionFromArrayById(position)
+            showQuestion(currentQuestion)
+        } else {
+            displayRandomizeConfirmation(true)
+            
+        }
     }
     
     func showPreviousQuestion() {
@@ -98,23 +104,24 @@ class ViewController: UIViewController {
     override func motionBegan(motion: UIEventSubtype,
         withEvent event: UIEvent?) {
             print("Began Shake")
-            displayShakeRandomizeConfirmation()
+            displayRandomizeConfirmation(false)
     }
     
-    func displayShakeRandomizeConfirmation() {
-        let alert = UIAlertController.init(title: "Randomize!", message: "You shook your device! Looking to randomize the questions?" , preferredStyle: UIAlertControllerStyle.ActionSheet)
+    func displayRandomizeConfirmation(outOfQuestions: Bool) {
+        let message = outOfQuestions ? "You answered all of the questions. Do you want to re-randomize and give it another go?":"You shook your device! Looking to randomize the questions?"
+        let alert = UIAlertController.init(title: "Randomize!", message: message , preferredStyle: UIAlertControllerStyle.ActionSheet)
+        alert.addAction(UIAlertAction(title: "Yeah!",
+            style: UIAlertActionStyle.Default,
+            handler:randomizeFromAlert
+            ))
         alert.addAction(UIAlertAction.init(title: "Nope",
             style: UIAlertActionStyle.Cancel,
             handler: nil)
         )
-        alert.addAction(UIAlertAction(title: "Yeah!",
-            style: UIAlertActionStyle.Destructive,
-            handler:shuffleFromAlert
-        ))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func shuffleFromAlert(alert: UIAlertAction!) {
+    func randomizeFromAlert(alert: UIAlertAction!) {
         QAController.sharedInstance.shuffleQuestionAnswerArray()
         self.currentQuestion = nil
         self.showNextQuestion()

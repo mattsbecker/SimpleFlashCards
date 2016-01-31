@@ -373,6 +373,11 @@ class QAController {
         return self.currentQuestion!
     }
 
+    func answerIsAvailableAtIndex(position: Int)->Bool {
+        let result = (position <= questionAnswerArray.count - 1) ? true:false
+        return result
+    }
+    
     func retreiveQuestionFromArrayById(position: Int)->Question {
         return questionAnswerArray[position];
     }
@@ -382,20 +387,21 @@ class QAController {
         
         To shuffle an array (a) of (n) elements
         
-        for i = 0 to n-2 
+        for i = 0 to n-1
             j ← random integer such that i ≤ j < n
                 exchange a[j] and a[i]
 
         */
-        
-        let n = questionAnswerArray.count - 2
+
+        let n = questionAnswerArray.count
         for (var i = 0; i < n; i++) {
             
             // retreive a random number that is greater than i, but less than n
-            let rand = Int(arc4random_uniform(UInt32(questionAnswerArray.count - 2)))
+            let rand = Int(arc4random_uniform(UInt32(questionAnswerArray.count) - 1))
             
             // get the positions of the current element and the randomly selected element
             let questionRand = questionAnswerArray[rand]
+            print("random array selection is: , position is: ", rand, i)
             let question = questionAnswerArray[i]
             
             // swap the positions of the elements
