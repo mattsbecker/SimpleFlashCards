@@ -351,7 +351,8 @@ class QAController {
         // shuffle the array using the Fisher-Yates (new) algorithm
         shuffleQuestionAnswerArray()
         
-        for (var i = 0; i < questionAnswerArray.count; i++) {
+        let questionAnswerArrayCount = questionAnswerArray.count - 1
+        for i in 0...questionAnswerArrayCount {
             questionAnswerArray[i].position = i
         }
         
@@ -359,7 +360,7 @@ class QAController {
     }
     
     func retreiveQuestionFromArray()->Question {
-        for (var i = 0; i < questionAnswerArray.count; i++) {
+        for i in 0...questionAnswerArray.count {
             let question = questionAnswerArray[i]
             if (question.wasShown) {
                 continue
@@ -373,12 +374,12 @@ class QAController {
         return self.currentQuestion!
     }
 
-    func answerIsAvailableAtIndex(position: Int)->Bool {
+    func answerIsAvailableAtIndex(_ position: Int)->Bool {
         let result = (position <= questionAnswerArray.count - 1) ? true:false
         return result
     }
     
-    func retreiveQuestionFromArrayById(position: Int)->Question {
+    func retreiveQuestionFromArrayById(_ position: Int)->Question {
         return questionAnswerArray[position];
     }
     
@@ -393,8 +394,8 @@ class QAController {
 
         */
 
-        let n = questionAnswerArray.count
-        for (var i = 0; i < n; i++) {
+        let n = questionAnswerArray.count - 1
+        for i in 0...n {
             
             // retreive a random number that is greater than i, but less than n
             let rand = Int(arc4random_uniform(UInt32(questionAnswerArray.count) - 1))
